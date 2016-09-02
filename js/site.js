@@ -70,7 +70,9 @@ $('#btn-rgb').on('click',function(){
   });
   hideDetailBox();
 });
-
+$('#color-detail').on('click', function(){
+  hideDetailBox();
+});
 function hideDetailBox(){
   $('#color-detail').removeClass('showDetail');
   $('#btn-hex').removeClass('showButtonDetail');
