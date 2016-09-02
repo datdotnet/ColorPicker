@@ -1,0 +1,77 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
+@import "variables";
+@import "mixins";
+
+$all: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+body{
+  background-color: $green;
+  overflow-x: hidden;
+}
+.top-menu{
+  background-color: $white;
+  height: 40px;
+  @include border-radius(6px);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 3px;
+  .listButton{
+    margin: 0 auto;
+    button{
+      height: 34px;
+      width: 50px;
+    }
+    #all{
+      background: $all;
+      color: orange;
+      font-weight: bold;
+      @include stroke(2,$white);
+    }
+    #red{
+      background-color: $red;
+    }
+    #green{
+      background-color: $green;
+    }
+  }
+
+}
+.container{
+  background-color: $white;
+  @include border-radius(10px);
+
+}
+
+//Style cho mỗi picker
+.colorpicker{
+  width: 75px;
+  height: 50px;
+  margin: 10px;
+}
+
+
+#color-detail{
+  position: relative;
+  @include border-radius(15px);
+  width: 400px;
+  margin: 30px auto;
+  height: 200px;
+  background-color: $blue;
+  padding-top: 20px;
+  .btn-group{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    width: 400px;
+    border-radius: 0 0 15px 15px;
+    button{
+      width: 200px;
+    }
+    .btn-hex{
+        border-radius: 0 15px 0 15px;
+    }
+    .btn-rgb{
+        border-radius: 15px 0 15px 0;
+    }
+  }
+}

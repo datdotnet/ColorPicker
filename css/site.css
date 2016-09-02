@@ -1,0 +1,68 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
+body {
+  background-color: #1E824C;
+  overflow-x: hidden; }
+
+.top-menu {
+  background-color: #E6E6E6;
+  height: 40px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  border-radius: 6px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 3px; }
+  .top-menu .listButton {
+    margin: 0 auto; }
+    .top-menu .listButton button {
+      height: 34px;
+      width: 50px; }
+    .top-menu .listButton #all {
+      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+      color: orange;
+      font-weight: bold;
+      text-shadow: -2px -2px 0 #E6E6E6, -2px -1px 0 #E6E6E6, -2px 0px 0 #E6E6E6, -2px 1px 0 #E6E6E6, -2px 2px 0 #E6E6E6, -1px -2px 0 #E6E6E6, -1px -1px 0 #E6E6E6, -1px 0px 0 #E6E6E6, -1px 1px 0 #E6E6E6, -1px 2px 0 #E6E6E6, 0px -2px 0 #E6E6E6, 0px -1px 0 #E6E6E6, 0px 0px 0 #E6E6E6, 0px 1px 0 #E6E6E6, 0px 2px 0 #E6E6E6, 1px -2px 0 #E6E6E6, 1px -1px 0 #E6E6E6, 1px 0px 0 #E6E6E6, 1px 1px 0 #E6E6E6, 1px 2px 0 #E6E6E6, 2px -2px 0 #E6E6E6, 2px -1px 0 #E6E6E6, 2px 0px 0 #E6E6E6, 2px 1px 0 #E6E6E6, 2px 2px 0 #E6E6E6; }
+    .top-menu .listButton #red {
+      background-color: #D91E18; }
+    .top-menu .listButton #green {
+      background-color: #1E824C; }
+
+.container {
+  background-color: #E6E6E6;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px; }
+
+.colorpicker {
+  width: 75px;
+  height: 50px;
+  margin: 10px; }
+
+#color-detail {
+  position: relative;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  border-radius: 15px;
+  width: 400px;
+  margin: 30px auto;
+  height: 200px;
+  background-color: #1E8BC3;
+  padding-top: 20px; }
+  #color-detail .btn-group {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    width: 400px;
+    border-radius: 0 0 15px 15px; }
+    #color-detail .btn-group button {
+      width: 200px; }
+    #color-detail .btn-group .btn-hex {
+      border-radius: 0 15px 0 15px; }
+    #color-detail .btn-group .btn-rgb {
+      border-radius: 15px 0 15px 0; }
+
+/*# sourceMappingURL=site.css.map */

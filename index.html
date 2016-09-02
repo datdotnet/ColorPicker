@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Color picker</title>
+    <link rel="stylesheet" href="./libs/css/bootstrap.min.css" media="screen" title="no title">
+    <link rel="stylesheet" href="./libs/css/font-awesome.min.css" media="screen" title="no title">
+    <link rel="stylesheet" href="./css/site.css" media="screen" title="no title">
+  </head>
+  <body>
+
+    <div class="row ">
+      <div class="top-menu col-md-6 col-md-offset-3">
+        <div class="listButton">
+          <button class="btn" id="all" title="All"></button>
+          <button class="btn" id="red"></button>
+          <button class="btn" id="green"></button>
+        </div>
+      </div>
+    </div><!--end row-->
+
+    <div class="container">
+    </div><!--end container-->
+
+    <div class="color-detail" id="color-detail">
+      <div class="btn-group">
+        <button class="btn btn-hex">
+          <i class="fa fa-copy"></i> <span class="color-value" id="hex-value">aaaaaaaaaa</span>
+        </button>
+        <button class="btn btn-rgb">
+          <i class="fa fa-copy"></i> <span class="color-value" id="rgb-value">bbbbbbbbbb</span>
+        </button>
+      </div>
+    </div><!--end color-detail-->
+  </body>
+</html>
+
+<script src="./libs/js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="./js/site.js"></script>
+<script type="text/javascript" src="./js/colors.js"></script>
+<script type="text/javascript" src="./js/colorpicker.js"></script>
