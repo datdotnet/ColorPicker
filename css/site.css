@@ -1,5 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300);
+@font-face {
+  font-family: LatoFont;
+  src: url(https://fonts.googleapis.com/css?family=Lato:300); }
 body {
+  font-family: LatoFont;
   background-color: #1E824C;
   overflow-x: hidden; }
 
@@ -40,29 +43,219 @@ body {
   height: 50px;
   margin: 10px; }
 
-#color-detail {
-  position: relative;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  border-radius: 15px;
+#bound {
   width: 400px;
-  margin: 30px auto;
   height: 200px;
-  background-color: #1E8BC3;
-  padding-top: 20px; }
-  #color-detail .btn-group {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: 0;
+  margin: 0;
+  padding: 0;
+  display: block; }
+  #bound #color-detail {
+    display: block;
+    position: relative;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    border-radius: 15px;
+    margin: 0 auto;
+    background-color: #1E8BC3;
+    padding-top: 20px; }
+    #bound #color-detail .btn-group {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin: 0;
+      width: 400px;
+      border-radius: 0 0 15px 15px; }
+      #bound #color-detail .btn-group button {
+        width: 199px; }
+      #bound #color-detail .btn-group .btn-hex {
+        border-radius: 0 15px 0 15px;
+        margin-right: 2px; }
+      #bound #color-detail .btn-group .btn-rgb {
+        border-radius: 15px 0 15px 0; }
+
+@-webkit-keyframes showColorDetail {
+  0% {
+    opacity: 0;
+    width: 0;
+    height: 0; }
+  100% {
+    opacity: 1;
     width: 400px;
-    border-radius: 0 0 15px 15px; }
-    #color-detail .btn-group button {
-      width: 200px; }
-    #color-detail .btn-group .btn-hex {
-      border-radius: 0 15px 0 15px; }
-    #color-detail .btn-group .btn-rgb {
-      border-radius: 15px 0 15px 0; }
+    height: 200px; } }
+@-moz-keyframes showColorDetail {
+  0% {
+    opacity: 0;
+    width: 0;
+    height: 0; }
+  100% {
+    opacity: 1;
+    width: 400px;
+    height: 200px; } }
+@-ms-keyframes showColorDetail {
+  0% {
+    opacity: 0;
+    width: 0;
+    height: 0; }
+  100% {
+    opacity: 1;
+    width: 400px;
+    height: 200px; } }
+@keyframes showColorDetail {
+  0% {
+    opacity: 0;
+    width: 0;
+    height: 0; }
+  100% {
+    opacity: 1;
+    width: 400px;
+    height: 200px; } }
+@-webkit-keyframes hideColorDetail {
+  0% {
+    opacity: 1;
+    width: 400px;
+    height: 200px; }
+  100% {
+    opacity: 0;
+    height: 0; } }
+@-moz-keyframes hideColorDetail {
+  0% {
+    opacity: 1;
+    width: 400px;
+    height: 200px; }
+  100% {
+    opacity: 0;
+    height: 0; } }
+@-ms-keyframes hideColorDetail {
+  0% {
+    opacity: 1;
+    width: 400px;
+    height: 200px; }
+  100% {
+    opacity: 0;
+    height: 0; } }
+@keyframes hideColorDetail {
+  0% {
+    opacity: 1;
+    width: 400px;
+    height: 200px; }
+  100% {
+    opacity: 0;
+    height: 0; } }
+@-webkit-keyframes showColorButtonDetail {
+  0% {
+    opacity: 0;
+    width: 0; }
+  100% {
+    opacity: 1;
+    width: 199px; } }
+@-moz-keyframes showColorButtonDetail {
+  0% {
+    opacity: 0;
+    width: 0; }
+  100% {
+    opacity: 1;
+    width: 199px; } }
+@-ms-keyframes showColorButtonDetail {
+  0% {
+    opacity: 0;
+    width: 0; }
+  100% {
+    opacity: 1;
+    width: 199px; } }
+@keyframes showColorButtonDetail {
+  0% {
+    opacity: 0;
+    width: 0; }
+  100% {
+    opacity: 1;
+    width: 199px; } }
+@-webkit-keyframes hideColorButtonDetail {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-moz-keyframes hideColorButtonDetail {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-ms-keyframes hideColorButtonDetail {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes hideColorButtonDetail {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+.hideDetail {
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-name: hideColorDetail;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0;
+  -moz-animation-duration: 0.5s;
+  -moz-animation-name: hideColorDetail;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0;
+  animation-duration: 0.5s;
+  animation-name: hideColorDetail;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
+
+.showDetail {
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-name: showColorDetail;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0;
+  -moz-animation-duration: 0.5s;
+  -moz-animation-name: showColorDetail;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0;
+  animation-duration: 0.5s;
+  animation-name: showColorDetail;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
+
+.hideButtonDetail {
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-name: hideColorButtonDetail;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0;
+  -moz-animation-duration: 0.5s;
+  -moz-animation-name: hideColorButtonDetail;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0;
+  animation-duration: 0.5s;
+  animation-name: hideColorButtonDetail;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
+
+.showButtonDetail {
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-name: showColorButtonDetail;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0;
+  -moz-animation-duration: 0.5s;
+  -moz-animation-name: showColorButtonDetail;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0;
+  animation-duration: 0.5s;
+  animation-name: showColorButtonDetail;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
 
 /*# sourceMappingURL=site.css.map */

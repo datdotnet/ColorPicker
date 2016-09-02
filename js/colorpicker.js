@@ -19,6 +19,7 @@ function showPicker(color){
   $('#hex-value').html(currentColor.getColorHex());
   $('#rgb-value').html(currentColor.getColorRGB());
   $('#color-detail').css('background-color',currentColor.getColorHex());
+  showDetailBox();
 }
 
 function addListColorPicker() {

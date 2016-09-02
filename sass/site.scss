@@ -53,31 +53,98 @@ body{
   margin: 10px;
 }
 
-
-#color-detail{
-  position: relative;
-  @include border-radius(15px);
+#bound{
   width: 400px;
-  margin: 30px auto;
   height: 200px;
-  background-color: $blue;
-  padding-top: 20px;
-  .btn-group{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: 0;
-    width: 400px;
-    border-radius: 0 0 15px 15px;
-    button{
-      width: 201px;
-    }
-    .btn-hex{
-        border-radius: 0 15px 0 15px;
-        border-right: 1px solid black;
-    }
-    .btn-rgb{
-        border-radius: 15px 0 15px 0;
+  margin: 0;
+  padding: 0;
+  display: block;
+  #color-detail{
+    display: block;
+    position: relative;
+    @include border-radius(15px);
+    margin: 0 auto;
+    background-color: $blue;
+    padding-top: 20px;
+    .btn-group{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin: 0;
+      width: 400px;
+      border-radius: 0 0 15px 15px;
+      button{
+        width: 199px;
+      }
+      .btn-hex{
+          border-radius: 0 15px 0 15px;
+          margin-right: 2px;
+      }
+      .btn-rgb{
+          border-radius: 15px 0 15px 0;
+      }
     }
   }
+}
+
+
+@include keyframes(showColorDetail){
+  0% {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    100% {
+        opacity: 1;
+        width: 400px;
+        height: 200px;
+    }
+};
+@include keyframes(hideColorDetail){
+  0% {
+        opacity: 1;
+        width: 400px;
+        height: 200px;
+    }
+
+    100% {
+        opacity: 0;
+        height: 0;
+    }
+};
+
+@include keyframes(showColorButtonDetail){
+  0% {
+        opacity: 0;
+        width: 0;
+    }
+
+    100% {
+        opacity: 1;
+        width: 199px;
+    }
+};
+@include keyframes(hideColorButtonDetail){
+  0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;        
+    }
+};
+
+.hideDetail{
+  @include animation(0, 0.5s, hideColorDetail);
+}
+.showDetail{
+  @include animation(0, 0.5s, showColorDetail);
+}
+
+.hideButtonDetail{
+  @include animation(0, 0.5s, hideColorButtonDetail);
+}
+.showButtonDetail{
+    @include animation(0, 0.5s, showColorButtonDetail);
 }
