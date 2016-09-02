@@ -1,9 +1,14 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300);
 @import "variables";
 @import "mixins";
 
+@font-face {
+    font-family: LatoFont;
+    src: url(https://fonts.googleapis.com/css?family=Lato:300);
+}
+
 $all: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
 body{
+  font-family: LatoFont;
   background-color: $green;
   overflow-x: hidden;
 }
@@ -65,10 +70,11 @@ body{
     width: 400px;
     border-radius: 0 0 15px 15px;
     button{
-      width: 200px;
+      width: 201px;
     }
     .btn-hex{
         border-radius: 0 15px 0 15px;
+        border-right: 1px solid black;
     }
     .btn-rgb{
         border-radius: 15px 0 15px 0;

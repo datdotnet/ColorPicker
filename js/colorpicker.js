@@ -16,6 +16,9 @@ function showPicker(color){
   var currentColor = findColorByHex(color);
   var newBodyBackGroundColor = LightenDarkenColor(color, 130);
   $('body').css('background-color', newBodyBackGroundColor);
+  $('#hex-value').html(currentColor.getColorHex());
+  $('#rgb-value').html(currentColor.getColorRGB());
+  $('#color-detail').css('background-color',currentColor.getColorHex());
 }
 
 function addListColorPicker() {

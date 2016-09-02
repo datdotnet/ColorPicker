@@ -25,11 +25,11 @@
 
     <div class="color-detail" id="color-detail">
       <div class="btn-group">
-        <button class="btn btn-hex">
-          <i class="fa fa-copy"></i> <span class="color-value" id="hex-value">aaaaaaaaaa</span>
+        <button class="btn btn-hex" id='btn-hex' title="Copy Hex Value">
+          <i class="fa fa-copy"></i> <span class="color-value" id="hex-value"></span>
         </button>
-        <button class="btn btn-rgb">
-          <i class="fa fa-copy"></i> <span class="color-value" id="rgb-value">bbbbbbbbbb</span>
+        <button class="btn btn-rgb" id='btn-rgb' title="Copy RGB Value">
+          <i class="fa fa-copy"></i> <span class="color-value" id="rgb-value"></span>
         </button>
       </div>
     </div><!--end color-detail-->
@@ -37,6 +37,7 @@
 </html>
 
 <script src="./libs/js/jquery-3.0.0.min.js"></script>
+<script src="./libs/js/clipboard.min.js"></script>
 <script type="text/javascript" src="./js/site.js"></script>
 <script type="text/javascript" src="./js/colors.js"></script>
 <script type="text/javascript" src="./js/colorpicker.js"></script>
