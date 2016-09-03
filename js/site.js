@@ -38,6 +38,25 @@ $('#green').on('click',function(){
   addListColorPicker();
   RenderColorPicker();
 });
+$('#blue').on('click',function(){
+  resetColor();
+  addBlueColors();
+  addListColorPicker();
+  RenderColorPicker();
+});
+
+$('#purple').on('click',function(){
+  resetColor();
+  addPurpleColors();
+  addListColorPicker();
+  RenderColorPicker();
+});
+$('#black').on('click',function(){
+  resetColor();
+  addBlackColors();
+  addListColorPicker();
+  RenderColorPicker();
+});
 
 function resetColor() {
   GLOBAL.ListColor = [];
@@ -74,7 +93,7 @@ $('#color-detail').on('click', function(){
   hideDetailBox();
 });
 function hideDetailBox(){
-  hideBackDetail();  
+  hideBackDetail();
   $('#color-detail').removeClass('showDetail');
   $('#btn-hex').removeClass('showButtonDetail');
   $('#btn-rgb').removeClass('showButtonDetail');
