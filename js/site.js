@@ -94,6 +94,7 @@ $('#color-detail').on('click', function(){
 });
 function hideDetailBox(){
   hideBackDetail();
+  $('body').css('background-color', '#1E824C');
   $('#color-detail').removeClass('showDetail');
   $('#btn-hex').removeClass('showButtonDetail');
   $('#btn-rgb').removeClass('showButtonDetail');

@@ -14,7 +14,7 @@ ColorPicker.prototype.getHtmlElement = function(){
 
 function showPicker(color){
   var currentColor = findColorByHex(color);
-  var newBodyBackGroundColor = LightenDarkenColor(color, 130);
+  var newBodyBackGroundColor = LightenDarkenColor(color, 100);
   $('body').css('background-color', newBodyBackGroundColor);
   $('#hex-value').html(currentColor.getColorHex());
   $('#rgb-value').html(currentColor.getColorRGB());
