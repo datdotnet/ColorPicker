@@ -43,12 +43,23 @@ body {
   height: 50px;
   margin: 10px; }
 
+.back-detail {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+  background-color: #000000;
+  opacity: 0.5; }
+
 #bound {
   width: 400px;
   height: 200px;
   margin: 0;
   padding: 0;
-  display: block; }
+  display: block;
+  z-index: 2040; }
   #bound #color-detail {
     display: block;
     position: relative;
@@ -57,7 +68,6 @@ body {
     -ms-border-radius: 15px;
     border-radius: 15px;
     margin: 0 auto;
-    background-color: #1E8BC3;
     padding-top: 20px; }
     #bound #color-detail .btn-group {
       position: absolute;
@@ -190,6 +200,46 @@ body {
     opacity: 1; }
   100% {
     opacity: 0; } }
+@-webkit-keyframes showBackDetail {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0.5; } }
+@-moz-keyframes showBackDetail {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0.5; } }
+@-ms-keyframes showBackDetail {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0.5; } }
+@keyframes showBackDetail {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0.5; } }
+@-webkit-keyframes hideBackDetail {
+  0% {
+    opacity: 0.5; }
+  100% {
+    opacity: 0; } }
+@-moz-keyframes hideBackDetail {
+  0% {
+    opacity: 0.5; }
+  100% {
+    opacity: 0; } }
+@-ms-keyframes hideBackDetail {
+  0% {
+    opacity: 0.5; }
+  100% {
+    opacity: 0; } }
+@keyframes hideBackDetail {
+  0% {
+    opacity: 0.5; }
+  100% {
+    opacity: 0; } }
 .hideDetail {
   -webkit-animation-delay: 0;
   -webkit-animation-duration: 0.5s;
@@ -255,6 +305,40 @@ body {
   animation-delay: 0;
   animation-duration: 0.5s;
   animation-name: showColorButtonDetail;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
+
+.hideBackDetail {
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 0.1s;
+  -webkit-animation-name: hideBackDetail;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0;
+  -moz-animation-duration: 0.1s;
+  -moz-animation-name: hideBackDetail;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0;
+  animation-duration: 0.1s;
+  animation-name: hideBackDetail;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
+
+.showBackDetail {
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 0.1s;
+  -webkit-animation-name: showBackDetail;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0;
+  -moz-animation-duration: 0.1s;
+  -moz-animation-name: showBackDetail;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0;
+  animation-duration: 0.1s;
+  animation-name: showBackDetail;
   animation-fill-mode: forwards;
   /* this prevents the animation from restarting! */ }
 

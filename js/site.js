@@ -74,6 +74,7 @@ $('#color-detail').on('click', function(){
   hideDetailBox();
 });
 function hideDetailBox(){
+  hideBackDetail();  
   $('#color-detail').removeClass('showDetail');
   $('#btn-hex').removeClass('showButtonDetail');
   $('#btn-rgb').removeClass('showButtonDetail');
@@ -81,29 +82,46 @@ function hideDetailBox(){
   $('#color-detail').addClass('hideDetail');
   $('#btn-hex').addClass('hideButtonDetail');
   $('#btn-rgb').addClass('hideButtonDetail');
-
+  setTimeout(function(){
+    $('#bound').css('display','none');
+  },500);
 }
 
 function showDetailBox(){
-  $('#bound').css('display','block');
+  showBackDetail();
   centerDetailBox();
+  $('#bound').css('display','block');
   $('#color-detail').removeClass('hideDetail');
   $('#btn-hex').removeClass('hideButtonDetail');
   $('#btn-rgb').removeClass('hideButtonDetail');
 
+
   $('#color-detail').addClass('showDetail');
   $('#btn-hex').addClass('showButtonDetail');
   $('#btn-rgb').addClass('showButtonDetail');
-
 }
 
 function disappearDetailColorBox(){
+  $('.back-detail').css('display','none');
   $('#bound').css('display','none');
 }
 
+function showBackDetail(){
+  $('.back-detail').css('display','block');
+  $('.back-detail').removeClass('hideBackDetail');
+  $('.back-detail').addClass('showBackDetail');
+  $('.back-detail').css('width', $(window).width());
+  $('.back-detail').css('height', $(window).height());
+}
+
+function hideBackDetail(){
+  $('.back-detail').css('display','none');
+  $('.back-detail').removeClass('showBackDetail');
+  $('.back-detail').addClass('hideBackDetail');
+}
 
 jQuery.fn.center = function () {
-    this.css("position","absolute");
+    this.css("position","fixed");
     this.css("top", ( $(window).height() - this.height() ) / 2+$(window).scrollTop() + "px");
     this.css("left", ( $(window).width() - this.width() ) / 2+$(window).scrollLeft() + "px");
     return this;

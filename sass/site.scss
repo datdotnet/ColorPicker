@@ -53,39 +53,51 @@ body{
   margin: 10px;
 }
 
-#bound{
-  width: 400px;
-  height: 200px;
-  margin: 0;
-  padding: 0;
-  display: block;
-  #color-detail{
+.back-detail{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+  background-color: #000000;
+  opacity: 0.5;
+}
+  #bound{
+    width: 400px;
+    height: 200px;
+    margin: 0;
+    padding: 0;
     display: block;
-    position: relative;
-    @include border-radius(15px);
-    margin: 0 auto;
-    background-color: $blue;
-    padding-top: 20px;
-    .btn-group{
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      margin: 0;
-      width: 400px;
-      border-radius: 0 0 15px 15px;
-      button{
-        width: 199px;
-      }
-      .btn-hex{
-          border-radius: 0 15px 0 15px;
-          margin-right: 2px;
-      }
-      .btn-rgb{
-          border-radius: 15px 0 15px 0;
+    z-index: 2040;
+    #color-detail{
+      display: block;
+      position: relative;
+      @include border-radius(15px);
+      margin: 0 auto;
+      padding-top: 20px;
+      .btn-group{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        width: 400px;
+        border-radius: 0 0 15px 15px;
+        button{
+          width: 199px;
+        }
+        .btn-hex{
+            border-radius: 0 15px 0 15px;
+            margin-right: 2px;
+        }
+        .btn-rgb{
+            border-radius: 15px 0 15px 0;
+        }
       }
     }
   }
-}
+
+
 
 
 @include keyframes(showColorDetail){
@@ -131,7 +143,26 @@ body{
     }
 
     100% {
-        opacity: 0;        
+        opacity: 0;
+    }
+};
+
+@include keyframes(showBackDetail){
+  0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+};
+@include keyframes(hideBackDetail){
+  0% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
     }
 };
 
@@ -147,4 +178,11 @@ body{
 }
 .showButtonDetail{
     @include animation(0, 0.5s, showColorButtonDetail);
+}
+
+.hideBackDetail{
+  @include animation(0, 0.1s, hideBackDetail);
+}
+.showBackDetail{
+    @include animation(0, 0.1s, showBackDetail);
 }
