@@ -1,14 +1,9 @@
 @import "variables";
 @import "mixins";
 
-@font-face {
-    font-family: LatoFont;
-    src: url(https://fonts.googleapis.com/css?family=Lato:300);
-}
-
 $all: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
 body{
-  font-family: LatoFont;
+  font-family: Lato;
   background-color: $green;
   overflow-x: hidden;
 }
