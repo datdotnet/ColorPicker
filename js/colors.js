@@ -80,12 +80,21 @@ function addPurpleColors(){
   addColor(purple1, purple2, purple3, purple4, purple5, purple6, purple7, purple8);
 }
 
+function addWhiteColors(){
+  addColor(white1, white2, white3, white4);
+}
+
+function addYellowColors(){
+  addColor(yellow1, yellow2, yellow3, yellow4, yellow5, yellow6, yellow7);
+}
 function addAllColors(){
    addRedColors();
    addGreenColors();
    addBlueColors();
    addPurpleColors();
    addBlackColors();
+   addWhiteColors();
+   addYellowColors();
 }
 //Red
 var red1 = new Color("#FF0000","rgb(255, 0, 0)", GLOBAL.ColorType.Red);
@@ -147,3 +156,17 @@ var purple5 = new Color("#9A12B3","rgb(154, 18, 179)",GLOBAL.ColorType.Purple);
 var purple6 = new Color("#9B59B6","rgb(155, 89, 182)",GLOBAL.ColorType.Purple);
 var purple7 = new Color("#BE90B4","rgb(190, 144, 180)",GLOBAL.ColorType.Purple);
 var purple8 = new Color("#BF55EC","rgb(191, 85, 236)",GLOBAL.ColorType.Purple);
+
+//White
+var white1 = new Color("#FFFFFF","rgb(255, 255, 255)",GLOBAL.ColorType.White);
+var white2 = new Color("#CCFFFF","rgb(204, 255, 255)",GLOBAL.ColorType.White);
+var white3 = new Color("#FFFFCC","rgb(255, 255, 204)",GLOBAL.ColorType.White);
+var white4 = new Color("#E6E6E6","rgb(230, 230, 230)",GLOBAL.ColorType.White);
+
+var yellow1 = new Color("#F39C12","rgb(243, 156, 18)",GLOBAL.ColorType.Yellow);
+var yellow2 = new Color("#F4B360","rgb(244, 179, 96)",GLOBAL.ColorType.Yellow);
+var yellow3 = new Color("#F4DD3F","rgb(244, 221, 63)",GLOBAL.ColorType.Yellow);
+var yellow4 = new Color("#F5AB35","rgb(245, 171, 53)",GLOBAL.ColorType.Yellow);
+var yellow5 = new Color("#F5D7BE","rgb(245, 215, 190)",GLOBAL.ColorType.Yellow);
+var yellow6 = new Color("#F7CA18","rgb(247, 202, 24)",GLOBAL.ColorType.Yellow);
+var yellow7 = new Color("#F9BF3B","rgb(249, 191, 59)",GLOBAL.ColorType.Yellow);

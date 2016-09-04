@@ -16,7 +16,7 @@ function RenderColorPicker(){
   for(i; i < len; i++){
     htmlString += GLOBAL.ListColorPicker[i].getHtmlElement();
   }
-  $('.container').html(htmlString);
+  $('#color-container').html(htmlString);
 }
 
 $('#all').on('click', function(){
@@ -57,6 +57,19 @@ $('#black').on('click',function(){
   addListColorPicker();
   RenderColorPicker();
 });
+$('#white').on('click',function(){
+  resetColor();
+  addWhiteColors();
+  addListColorPicker();
+  RenderColorPicker();
+});
+$('#yellow').on('click',function(){
+  resetColor();
+  addYellowColors();
+  addListColorPicker();
+  RenderColorPicker();
+});
+
 
 function resetColor() {
   GLOBAL.ListColor = [];
@@ -151,6 +164,6 @@ function centerDetailBox(){
   $('#bound').center();
 }
 
-$(window ).resize(function() {
+$(window).resize(function() {
     centerDetailBox();
 });

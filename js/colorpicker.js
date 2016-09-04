@@ -2,6 +2,9 @@
 var ColorPicker = function(color){
   this.Color = color;
   this.HtmlElement ='<button  class="btn colorpicker"  style="background-color:'+this.Color.getColorHex()+'" onclick="showPicker(\''+this.Color.getColorHex()+'\')"></button>';
+  if(color.getColorType() == GLOBAL.ColorType.White){
+    this.HtmlElement ='<button  class="btn colorpicker-white"  style="background-color:'+this.Color.getColorHex()+'" onclick="showPicker(\''+this.Color.getColorHex()+'\')"></button>';
+  }
 }
 
 ColorPicker.prototype.getColor = function(){
@@ -19,6 +22,9 @@ function showPicker(color){
   $('#hex-value').html(currentColor.getColorHex());
   $('#rgb-value').html(currentColor.getColorRGB());
   $('#color-detail').css('background-color',currentColor.getColorHex());
+  if(currentColor.getColorType() == GLOBAL.ColorType.White){
+    $('.btn-group>button').css('border','1px solid #663399');
+  }
   showDetailBox();
 }
 
